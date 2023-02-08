@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Autenticazione</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+            <form class="form" action="/api/login" method="POST">
+                <h1 class="form__title">Accedi</h1>
+                <div class="form__message form__message--error"></div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Email" name="email" required oninvalid="this.setCustomValidity('Indirizzo email mancante')"  oninput="this.setCustomValidity('')"/>
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" class="form__input" autofocus placeholder="Password" name="password" required oninvalid="this.setCustomValidity('password mancante')"  oninput="this.setCustomValidity('')">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <button class="form__button" type="submit">Accedi</button>
+                <%- include('../partials/messages')%>
+            </form>
+        <div class="form__back__button">
+            <a href="/eventi"><button id="text-button">Torna indietro</button></a>
+        </div>
+    </div>
+
+</body>
+</html>

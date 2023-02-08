@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="IT">
+<head>
+<title>AirExpo | Homepage</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="/styles/menu.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
+<link href="/styles/home.css" rel="stylesheet" type="text/css" media="all">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<script>
+  $(document).ready(function(){
+    $('header').load("navbarLoading");
+  });
+</script>
+
+<header>
+  <!-- navbar -->
+</header>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<div class="bgded overlay">
+  <div id="pageintro" class="hoc clear"> 
+    <article>
+      <h2 class="heading">AirExpo<br></h2>
+      <h4 style="font-size: 35px;">Le location attualmente disponibili dei nostri hosts:<br></h4>
+      <div id="mapcontainer"><div id="map"></div></div>
+      
+      <script>
+        function initMap() {
+          var italy = {lat: 41.8719, lng: 12.5674};
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 6, center: italy});
+        }
+      </script>
+    
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgtaYWbPlP1LXuX4p9xm7N7NUhziob2Vw&callback=initMap">
+      </script>
+
+    </article>
+  </div>
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<section class="product"> 
+  <h2 class="product-category">Recenti</h2>
+  <button class="pre-btn"><img src="../images/arrow.png" alt=""></button>
+  <button class="nxt-btn"><img src="../images/arrow.png" alt=""></button>
+  <div class="product-container" id="cards"></div>
+</section>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<script>
+  $(document).ready(function(){
+    $('footer').load("footerLoading");
+  });
+</script>
+
+<footer>
+  <!-- footer -->
+</footer>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- JAVASCRIPTS -->
+<script src="/config/getEventList.js"></script>
+<script src="/scriptsLayout/jquery.min.js"></script>
+<script src="/scriptsLayout/jquery.backtotop.js"></script>
+<script src="/scriptsLayout/jquery.mobilemenu.js"></script>
+<script src="/scriptsLayout/slider.js"></script>
+<script src="/scriptsLayout/jquery.easypiechart.min.js"></script>
+
+</body>
+</html>

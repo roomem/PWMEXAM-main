@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="IT">
+<head>
+  <!-- <script src="/scripts/isAdminLogged.js"></script> -->
+<title>Revents | Pannello admin</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="/styles/menu.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<script>
+  $(document).ready(function(){
+    $('header').load("navbarLoading");
+  });
+</script>
+
+<header>
+  <!-- navbar -->
+</header>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<style>
+    .button {
+        margin:auto;
+        display:block;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        padding: 15px 32px;
+        background-color: #cb723f;
+        border-color: white;
+        border: solid white; 
+        border-radius: 25px;
+        font-size: 18px
+    }
+</style>
+
+<div style="background-color: #303032; padding: 50px 0 50px;">
+  <h1 style="text-align: center; font-size: 35px;">Pannello admin</h1>
+  <%- include('../partials/messages')%>
+  <br>
+  <a href="/creaEvento"><button class="button">Inserisci evento</button></a>
+  <br>
+  <br>
+  <a href="/eventiAdmin"><button class="button">Elimina evento</button></a>
+  <br>
+  <br>
+  <form class="form" action="/api/logout?_method=DELETE" method="POST">
+    <button class="button">Logout</button>
+  </form>
+  <br>
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<script>
+  $(document).ready(function(){
+    $('footer').load("footerLoading");
+  });
+</script>
+
+<footer>
+  <!-- footer -->
+</footer>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- JAVASCRIPTS -->
+<script src="/scriptsLayout/jquery.min.js"></script>
+<script src="/scriptsLayout/jquery.backtotop.js"></script>
+<script src="/scriptsLayout/jquery.mobilemenu.js"></script>
+<!-- Homepage specific -->
+<script src="/scriptsLayout/jquery.easypiechart.min.js"></script>
+
+</body>
+</html>

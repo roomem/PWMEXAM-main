@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="IT">
+<head>
+<title>Revent | Pannello admin</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="/styles/createEvent.css" rel="stylesheet" type="text/css" media="all">
+<link href="/styles/menu.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<script>
+  $(document).ready(function(){
+    $('header').load("navbarLoading");
+  });
+</script>
+
+<header>
+  <!-- navbar -->
+</header>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<form id="page" action="/addEvent" name="form" method="POST" enctype="multipart/form-data">
+
+    <div id="data">
+      <%- include('../partials/messages')%>
+        <h1 id="title-form">Inserisci nuovo evento</h1>
+        <div id="single-data">
+            <label for="nome">Inserire il nome dell'evento</label>
+            <br>
+            <input class="center-block" class="center-block" type="text" name="nome" placeholder="Inserire il nome dell'evento"></input>
+        </div>
+        <br><br>
+        <div id="single-data">
+            <label for="immagine">Inserire eventuale immagine</label>
+            <br>
+            <input class="center-block" id="immagine" type="file" accept="image/*"  name="immagine" placeholder="Inserire eventuale immagine">
+        </div>
+        <br><br>
+        <div id="single-data">
+            <label for="descrizione">Inserire la descrizione dell'evento</label>
+            <br>
+            <textarea class="center-block" name="descrizione"></textarea>
+        </div>
+        <br><br>
+        <div id="single-data">
+          <label for="tipologia-selezione">Scegli una tipologia:</label>
+          <select class="select-filter" name="tipo" id="tipologia-selezione">
+              <option value="">Scegli una tipologia</option>
+              <option value="serata">evento</option>
+              <option value="concerto">concerto</option>
+              <option value="festa">party</option>
+          </select>
+        </div>
+        <br><br>
+        <div id="single-data">
+          <label for="provincia-selezione">Scegli una provincia:</label>
+          <select class="select-filter" name="luogo" id="provincia-selezione">
+              <option value="">Scegli una provincia</option>
+              <option value="sondrio">Sondrio</option>
+              <option value="lecco">Lecco</option>
+          </select>
+        </div>
+        <br><br>
+        <div id="single-data">
+            <label for="posizione">Inserire il luogo dell'evento</label>
+            <br>
+            <input class="center-block" type="text" name="posizione" placeholder="Inserire il luogo dell'evento"></input>
+        </div>
+        <br><br>
+        <div id="single-data">
+            <label for="eta">Inserire l'eta' dell'evento</label>
+            <br>
+            <input class="center-block" type="text" name="eta" placeholder="Inserire l'eta' dell'evento"></input>
+        </div>
+        <br><br>
+        <div id="single-data">
+            <label for="dress_code">Inserire il dress code dell'evento</label>
+            <br>
+            <input class="center-block" type="text" name="dress_code" placeholder="Inserire il dress code dell'evento"></input>
+        </div>
+        <br><br>
+        <div id="single-data">
+            <label for="orario">Inserire l'orario dell'evento</label>
+            <br>
+            <input class="center-block" type="text" name="orario" placeholder="Inserire l'orario dell'evento"></input>
+        </div>
+        <br><br>
+        <div id="single-data">
+            <label for="data">Inserire la data dell'evento</label>
+            <br>
+            <input class="center-block" type="text" name="data" placeholder="Inserire la data dell'evento"></input>
+        </div>
+        <br><br>
+        <div id="single-data">
+            <label for="costo">Inserire il costo dell'evento</label>
+            <br>
+            <input class="center-block" type="text" name="costo" placeholder="Inserire il costo dell'evento"></input>
+        </div>
+        <br><br>
+
+    <button class="center-block" type="submit">Crea Evento</button>
+    </div>
+</form>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<script>
+  $(document).ready(function(){
+    $('footer').load("footerLoading");
+  });
+</script>
+
+<footer>
+  <!-- footer -->
+</footer>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- JAVASCRIPTS -->
+<script src="/scriptsLayout/jquery.min.js"></script>
+<script src="/scriptsLayout/jquery.backtotop.js"></script>
+<script src="/scriptsLayout/jquery.mobilemenu.js"></script>
+<!-- Homepage specific -->
+<script src="/scriptsLayout/jquery.easypiechart.min.js"></script>
+<script src="/config/parsingNewEvent.js"></script>
+
+</body>
+</html>

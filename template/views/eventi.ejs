@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="IT">
+<head>
+<title>Revents | Tutorial</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="/styles/menu.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
+<link href="/styles/slider.css" rel="stylesheet" type="text/css" media="all">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+</head>
+<body id="top">
+
+<script>
+  $(document).ready(function(){
+    $('header').load("navbarLoading");
+  });
+</script>
+
+<header>
+  <!-- navbar -->
+</header>
+
+<div id="linker">
+    <p>Sei un admin? <a id="text-button" href="/login">Accedi per modificare gli eventi</a></p>
+</div>
+
+<div class="filter" action="/api/getList" method="GET">
+  <form class="form">
+      <h1 id="evento-info-titolo">Filtri</h1>
+      <label for="provincia-selezione">Scegli una provincia:</label>
+      <select name="luogo" id="provincia-selezione">
+          <option value="">Scegli una provincia</option>
+          <option value="sondrio">Sondrio</option>
+          <option value="lecco">Lecco</option>
+      </select>
+      <label for="tipologia-selezione">Scegli una tipologia:</label>
+      <select name="tipo" id="tipologia-selezione">
+          <option value="">Scegli una tipologia</option>
+          <option value="serata">evento</option>
+          <option value="concerto">concerto</option>
+          <option value="festa">party</option>
+      </select>
+      <button id="bottone" type="submit">Cerca</button>
+  </form>
+</div>
+
+<main>
+    <section class="cards" id="cards">
+    </div>      
+</main>
+
+<script>
+  $(document).ready(function(){
+    $('footer').load("footerLoading");
+  });
+</script>
+
+<footer>
+  <!-- footer -->
+</footer>
+
+<!-- JAVASCRIPTS -->
+<script src="/config/getEventList.js"></script>
+<script src="/scriptsLayout/jquery.min.js"></script>
+<script src="/scriptsLayout/jquery.backtotop.js"></script>
+<script src="/scriptsLayout/jquery.mobilemenu.js"></script>
+<!-- Homepage specific -->
+<script src="/scriptsLayout/jquery.easypiechart.min.js"></script>
+
+</body>
+</html>
